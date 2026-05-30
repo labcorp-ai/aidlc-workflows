@@ -1,5 +1,5 @@
 {
-  "name": "Process Check After Agent",
+  "name": "aidlc-run-process-checker",
   "version": "1.0.0",
   "description": "After every builder or validator sub-agent invocation, reminds the orchestrator to run process_checker and read the checkpoint before proceeding.",
   "when": {

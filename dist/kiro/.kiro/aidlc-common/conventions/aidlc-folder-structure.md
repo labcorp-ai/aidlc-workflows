@@ -49,8 +49,7 @@ org-ai-kb/
         │   └── workflow-composition/            (artifacts produced by the workflow-composition skill)
         │       ├── workflow-composition-questions.md
         │       ├── workflow-composition-plan.md
-        │       ├── workflow-rationale.md
-        │       └── lens-<lens-name>-answers.md  (one per activated lens; one-time clarification answers)
+        │       └── workflow-rationale.md
         │
         ├── inception/
         │   ├── reverse-engineering/            (one subdirectory per repo, always scoped)

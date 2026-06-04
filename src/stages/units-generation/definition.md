@@ -16,15 +16,16 @@ Artifacts this stage can produce. The owner's plan determines which are relevant
 - `units.md` — unit definitions with responsibilities, boundaries, and owned components
 - `unit-dependencies.md` — dependency matrix showing build/deploy ordering and integration points
 - `unit-story-map.md` — which stories each unit implements, ensuring full coverage
+- `unit-contracts.md` — inter-unit contracts defining how communicating units exchange data: protocol, payload shape, error handling, and ownership of the contract
 
 ## Owner
 
-systems-architect
+aidlc-systems-architect-agent
 
 ## Contributors
 
-- product-manager
+- aidlc-product-manager-agent
 
 ## Reviewer
 
-architecture-reviewer
+aidlc-architecture-reviewer-agent

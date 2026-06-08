@@ -24,6 +24,7 @@ Directed graph of all available stages. The orchestrator reads this during workf
 | contract-design | Define inter-unit contracts so teams can build in parallel | aidlc-app-architect-agent |
 | functional-design | Design detailed business logic, domain entities, rules, and API spec per unit | aidlc-systems-architect-agent |
 | nfr-design | Define quality targets, tech stack, and architectural patterns | aidlc-systems-architect-agent |
+| test-design | Produce English-language test specification as acceptance criteria | aidlc-systems-architect-agent |
 | infrastructure-design | Map logical components to infrastructure services and define deployment | aidlc-systems-architect-agent |
 | code-generation | Generate production code per unit with write-test-verify cycles | aidlc-sw-dev-engineer-agent |
 
@@ -42,8 +43,9 @@ Stages have flexible inputs — they can start from multiple predecessors or dir
 | contract-design | units-generation (units + dependencies), components.yaml (entity shapes) |
 | functional-design | contract-design (contracts for this unit's boundaries), units-generation (unit definition + assigned stories) |
 | nfr-design | requirements.md (NFR section), functional-design artifacts, components.yaml |
+| test-design | functional-design (rules.yaml, entities.yaml, functional-spec.md), nfr-specification.md, contracts |
 | infrastructure-design | nfr-design (spec with patterns + tech stack) |
-| code-generation | functional-design, nfr-design, infrastructure-design, units-generation, domain-design, stories, requirements |
+| code-generation | functional-design, nfr-design, test-design (acceptance criteria), infrastructure-design, units-generation, domain-design, stories, requirements |
 
 ## Artifact Flow
 

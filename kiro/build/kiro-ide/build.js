@@ -8,6 +8,7 @@
  *   src/stages/              → dist/kiro-ide/.kiro/stages/        (copy)
  *   src/conventions/         → dist/kiro-ide/.kiro/conventions/   (copy)
  *   src/tools/               → dist/kiro-ide/.kiro/tools/         (copy)
+ *   src/steering/            → dist/kiro-ide/.kiro/steering/     (copy)
  *   src/kiro-ide/hooks/      → dist/kiro-ide/.kiro/hooks/         (copy)
  *
  * Usage: node build/kiro-ide/build.js
@@ -219,7 +220,10 @@ cpR(path.join(SRC, "conventions"), path.join(OUT, "conventions"));
 // 5. Copy tools
 cpR(path.join(SRC, "tools"), path.join(OUT, "tools"));
 
-// 6. Copy Kiro-specific hooks
+// 6. Copy steering files
+cpR(path.join(SRC, "steering"), path.join(OUT, "steering"));
+
+// 7. Copy Kiro-specific hooks
 const hooksSrc = path.join(SRC, "target-config", "kiro-ide", "hooks");
 const hooksDest = path.join(OUT, "hooks");
 fs.mkdirSync(hooksDest, { recursive: true });

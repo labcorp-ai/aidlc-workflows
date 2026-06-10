@@ -74,8 +74,15 @@ Everything runs on native Windows — WSL is not required. [Git for Windows](htt
 # Copy the implementation into your project
 cp -r dist/claude/.claude/ your-project/.claude/
 
+# Launch Claude Code in your project
+cd your-project && claude
+```
+
+Then, inside the Claude Code session:
+
+```
 # Verify the setup
-cd your-project && /aidlc --doctor
+/aidlc --doctor
 
 # Start a workflow — describe what you want to build
 /aidlc Build a task management API with user authentication

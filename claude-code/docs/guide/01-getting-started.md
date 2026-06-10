@@ -267,6 +267,8 @@ See [Your First Workflow](02-your-first-workflow.md) for a step-by-step walkthro
 
 ## Quick Reference
 
+In your shell:
+
 ```bash
 # Verify prerequisites
 command -v claude >/dev/null && echo "✓ Claude Code" || echo "✗ Claude Code"
@@ -275,8 +277,14 @@ command -v bun    >/dev/null && echo "✓ bun"          || echo "✗ bun"
 # Install
 cp -r dist/claude/.claude/ your-project/.claude/
 
+# Launch Claude Code in your project
+cd your-project && claude
+```
+
+Inside the Claude Code session:
+
+```
 # Scaffold docs directory
-cd your-project
 /aidlc --init
 
 # Verify (exits 1 on any check failure; read stdout for the full report)

@@ -39,8 +39,9 @@ Inception runs serially with the facilitator at the keyboard. Construction is wh
 
 ### Before the session
 
-```bash
-cd workshop-project
+Launch Claude Code in the project (`cd workshop-project && claude`), then:
+
+```
 /aidlc --init --scope workshop --project-dir .
 ```
 
@@ -120,9 +121,9 @@ The push has three possible outcomes:
 
 ### 3. Run the Bolt locally
 
-Once the claim is published, run the Bolt the normal way:
+Once the claim is published, run the Bolt the normal way — in the Claude Code session:
 
-```bash
+```
 /aidlc
 ```
 
@@ -172,7 +173,8 @@ Alice and Bob have each cloned the workshop repo. During Inception's stage 2.2 t
 git fetch --all
 bun .claude/tools/aidlc-worktree.ts create --slug user-profile-api --base main
 git push origin bolt-user-profile-api    # claim succeeds — first claimant
-/aidlc                           # runs Construction stages 3.1–3.5 in the worktree
+# In Claude Code (`claude`), run: /aidlc
+#   — runs Construction stages 3.1–3.5 in the worktree
 # Group reviews and approves the always-gate (workshop keeps every gate)
 bun .claude/tools/aidlc-bolt.ts complete --merge --slug user-profile-api
 git push origin main                      # publishes the merged result

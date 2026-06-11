@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A sub-agent just completed. Run the process checker: node .claude/tools/process-checker.js <intent-dir>. Read the output. If FAIL, address the failures before proceeding. If PASS, advance to the next step."
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+# Un-ignore dist/ so the distributable can be tracked
+!dist/
+!dist/**
+
+# Allow .claude directories to be tracked
+!.claude/
+!**/.claude/
+!**/.claude/**
